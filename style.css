@@ -1,53 +1,95 @@
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    background:#0f172a;
-    color:white;
+html {
+    scroll-behavior: smooth;
 }
 
-.hero-content{
-    max-width:700px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
 }
 
-.hero h1{
-    font-size:48px;
-    margin-bottom:10px;
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
-.hero h2{
-    font-size:28px;
-    color:#38bdf8;
-    margin-bottom:20px;
+.hero-content {
+    max-width: 700px;
+    animation: float 4s ease-in-out infinite;
 }
 
-.hero p{
-    font-size:18px;
-    line-height:1.7;
-    margin-bottom:30px;
-    color:#cbd5e1;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-.buttons{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
+.hero h2 {
+    font-size: 24px;
+    color: #38bdf8;
+    margin-bottom: 20px;
 }
 
-.btn{
-    padding:12px 24px;
-    background:#38bdf8;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
+.hero p {
+    font-size: 18px;
+    color: #cbd5e1;
+    margin-bottom: 30px;
 }
 
-.btn-outline{
-    background:transparent;
-    border:2px solid #38bdf8;
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #38bdf8;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* FADE IN */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -1,13 +1,21 @@
-<link rel="stylesheet" href="style.css">
-<section class="hero">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeffrey Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero fade-in">
     <div class="hero-content">
         <h1>Jeffrey Jacob</h1>
         <h2>Frontend Developer & Website Builder</h2>
 
-        <p>
-            I build responsive and modern websites for businesses,
-            creators, and startups.
-        </p>
+        <p>I build responsive and modern websites for businesses, creators, and startups.</p>
 
         <div class="buttons">
             <a href="#contact" class="btn">Hire Me</a>
@@ -15,3 +23,30 @@
         </div>
     </div>
 </section>
+
+<section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <p>Coming soon...</p>
+</section>
+
+<section id="contact" class="section fade-in">
+    <h2>Contact Me</h2>
+    <p>WhatsApp / Email section coming soon</p>
+</section>
+
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
