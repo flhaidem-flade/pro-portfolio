@@ -31,13 +31,12 @@ body {
 
 .hero h2 {
   color: #38bdf8;
-  margin-top: 10px;
 }
 
 .hero p {
   color: #cbd5e1;
-  margin-top: 15px;
   font-size: 18px;
+  margin-top: 15px;
 }
 
 /* BUTTONS */
@@ -45,8 +44,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 25px;
   flex-wrap: wrap;
+  margin-top: 25px;
 }
 
 .btn {
@@ -83,6 +82,7 @@ body {
   margin-top: 30px;
 }
 
+/* CARDS */
 .card {
   background: #111c33;
   padding: 22px;
@@ -92,10 +92,10 @@ body {
 
 .card:hover {
   transform: translateY(-10px);
-  background: #1b2a4a;
+  box-shadow: 0 10px 30px rgba(56,189,248,0.3);
 }
 
-/* CONTACT BOX */
+/* CONTACT */
 .contact-box {
   display: flex;
   justify-content: center;
@@ -106,7 +106,6 @@ body {
 
 .highlight {
   color: #38bdf8;
-  margin-bottom: 15px;
 }
 
 /* FLOAT BUTTON */
@@ -120,7 +119,6 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 /* ANIMATION */
@@ -130,7 +128,7 @@ body {
   100% { transform: translateY(0); }
 }
 
-/* SCROLL ANIMATION */
+/* FADE IN */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -142,7 +140,7 @@ body {
   transform: translateY(0);
 }
 
-/* MOBILE OPTIMIZATION */
+/* MOBILE */
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 36px;
